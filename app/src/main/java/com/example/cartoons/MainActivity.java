@@ -11,7 +11,7 @@ import android.widget.ListView;
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
-    String[] cartoons = {"Зверополис", "Босс-Молокосос", "Кот в сапогах", "Миньоны", "Том и Джерри", "Тачки", "Рио", "Король Лев"};
+    String[] cartoons = {"Зверополис", "Босс-Молокосос", "Кот в сапогах", "Миньоны", "Том и Джерри", "Тачки", "Рио", "Король Лев","Смешарики","Бременские музыканты","Скуби-ду"};
 
 
     @Override
