@@ -1,60 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:gravity="center"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
-
-    <Button
-        android:id="@+id/zveropolic"
+    <ListView
+        android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Зверополис" />
+        android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/boss"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Босс-молокосос" />
-
-    <Button
-        android:id="@+id/cat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Кот в сапогах " />
-
-    <Button
-        android:id="@+id/minions"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Миньоны" />
-
-    <Button
-        android:id="@+id/tomAndJerry"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Том и Джерри" />
-
-    <Button
-        android:id="@+id/cars"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Тачки" />
-
-    <Button
-        android:id="@+id/rio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Рио" />
-
-    <Button
-        android:id="@+id/lion_king"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Король лев" />
 </LinearLayout>
