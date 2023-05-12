@@ -14,17 +14,17 @@ public class ResultActivity extends AppCompatActivity {
     private ImageView imageView;
 
     private Integer[] images = {R.drawable.zootopia, R.drawable.boss, R.drawable.cat, R.drawable.minion, R.drawable.tomandjerry, R.drawable.car, R.drawable.rio, R.drawable.lion, R.drawable.smeshariki, R.drawable.music,R.drawable.scoobydoo,R.drawable.simpsons,R.drawable.bigooh};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
         imageView = findViewById(R.id.imageView);
+        String selectedItem = getIntent().getStringExtra("selectedItem");
+
         textView = findViewById(R.id.text_view);
         Intent intent = getIntent();
         String cartoon = intent.getStringExtra("cartoon");
-        String selectedItem = getIntent().getStringExtra("selectedItem");
 
         if (cartoon.equals("Зверополис")) {
             textView.setText("Добро пожаловать в Зверополис – современный город, населенный самыми разными животными, от огромных слонов до крошечных мышек. Зверополис разделен на районы, полностью повторяющие естественную среду обитания разных жителей – здесь есть и элитный район Площадь Сахары и неприветливый Тундратаун. В этом городе появляется новый офицер полиции, жизнерадостная зайчиха Джуди Хоппс, которая с первых дней работы понимает, как сложно быть маленькой и пушистой среди больших и сильных полицейских. Джуди хватается за первую же возможность проявить себя, несмотря на то, что ее партнером будет болтливый хитрый лис Ник Уайлд. Вдвоем им предстоит раскрыть сложное дело, от которого будет зависеть судьба всех обитателей Зверополиса.");
@@ -53,7 +53,6 @@ public class ResultActivity extends AppCompatActivity {
         } else if (cartoon.equals("Большой Ух")) {
             textView.setText("Эта короткометражка рассказывает нам о волчонке, жителе леса, который наблюдает за ночным небом. При этом он неравнодушен к жителям леса, в котором все безраздельно обитают. И тут, откуда не возьмись, появляется Большой Ух, который говорит что он слышит всё что происходит на небе и пытается увлечь этим же волчонка. Волчонок в свою очередь пытается это сделать, но он больше настроен слышать, и слушать призывы о помощи лесных обитателей.");
         }
-
         if (selectedItem.equals("Зверополис")) {
             imageView.setImageResource(images[0]);
         } else if (selectedItem.equals("Босс-Молокосос")) {
