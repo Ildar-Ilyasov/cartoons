@@ -27,8 +27,10 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selectedItem = (String) parent.getItemAtPosition(position);
                 Intent intent = new Intent(MainActivity.this, ResultActivity.class);
                 intent.putExtra("cartoon", cartoons[position]);
+                intent.putExtra("selectedItem", selectedItem);
                 startActivity(intent);
             }
         });
