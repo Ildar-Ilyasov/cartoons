@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         listView = findViewById(R.id.list_view);
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, cartoons);
         listView.setAdapter(adapter);
@@ -27,8 +28,10 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selectedItem = (String) parent.getItemAtPosition(position);
                 Intent intent = new Intent(MainActivity.this, ResultActivity.class);
                 intent.putExtra("cartoon", cartoons[position]);
+                intent.putExtra("selectedItem", selectedItem);
                 startActivity(intent);
             }
         });

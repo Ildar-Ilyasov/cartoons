@@ -12,8 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/size20"
-        android:textColor="@color/orange"
+        android:textColor="@color/blue"
         android:padding="@dimen/size16"
-        android:textStyle="bold|italic"/>
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 
 </LinearLayout>

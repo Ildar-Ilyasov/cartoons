@@ -1,18 +1,26 @@
 package com.example.cartoons;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ResultActivity extends AppCompatActivity {
 
     TextView textView;
+    private ImageView imageView;
 
+    private Integer[] images = {R.drawable.zootopia, R.drawable.boss, R.drawable.cat, R.drawable.minion, R.drawable.tomandjerry, R.drawable.car, R.drawable.rio, R.drawable.lion, R.drawable.smeshariki, R.drawable.music,R.drawable.scoobydoo,R.drawable.simpsons,R.drawable.bigooh};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
+        imageView = findViewById(R.id.imageView);
+        String selectedItem = getIntent().getStringExtra("selectedItem");
 
         textView = findViewById(R.id.text_view);
         Intent intent = getIntent();
@@ -44,6 +52,33 @@ public class ResultActivity extends AppCompatActivity {
             textView.setText("Семейство Симпсонов — папаша Гомер, мама Мардж, дочери Лиза и маленькая Мэгги, и несносный подросток Барт — проживают в среднестатистическом городке Спрингфилд. Гомер трудится на местной атомной станции, Мардж занимается домом и детьми, любознательная Лиза отлично учится в школе, а Барт постоянно попадает во всякие переделки.");
         } else if (cartoon.equals("Большой Ух")) {
             textView.setText("Эта короткометражка рассказывает нам о волчонке, жителе леса, который наблюдает за ночным небом. При этом он неравнодушен к жителям леса, в котором все безраздельно обитают. И тут, откуда не возьмись, появляется Большой Ух, который говорит что он слышит всё что происходит на небе и пытается увлечь этим же волчонка. Волчонок в свою очередь пытается это сделать, но он больше настроен слышать, и слушать призывы о помощи лесных обитателей.");
+        }
+        if (selectedItem.equals("Зверополис")) {
+            imageView.setImageResource(images[0]);
+        } else if (selectedItem.equals("Босс-Молокосос")) {
+            imageView.setImageResource(images[1]);
+        } else if (selectedItem.equals("Кот в сапогах")) {
+            imageView.setImageResource(images[2]);
+        }else if (selectedItem.equals("Миньоны")) {
+            imageView.setImageResource(images[3]);
+        }else if (selectedItem.equals("Том и Джерри")) {
+            imageView.setImageResource(images[4]);
+        }else if (selectedItem.equals("Тачки")) {
+            imageView.setImageResource(images[5]);
+        }else if (selectedItem.equals("Рио")) {
+            imageView.setImageResource(images[6]);
+        }else if (selectedItem.equals("Король Лев")) {
+            imageView.setImageResource(images[7]);
+        }else if (selectedItem.equals("Смешарики")) {
+            imageView.setImageResource(images[8]);
+        }else if (selectedItem.equals("Бременские музыканты")) {
+            imageView.setImageResource(images[9]);
+        }else if (selectedItem.equals("Скуби-ду")) {
+            imageView.setImageResource(images[10]);
+        }else if (selectedItem.equals("Симпсоны")) {
+            imageView.setImageResource(images[11]);
+        }else {
+            imageView.setImageResource(images[12]);
         }
     }
 }
